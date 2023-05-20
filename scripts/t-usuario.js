@@ -23,6 +23,6 @@ toggle.onclick = function(){
 
 // menu ususario
 function MenuToggle(){
-    const toggleMenu = document.querySelector('.box-usuario');
+    const toggleMenu = document.querySelector('.menu');
     toggleMenu.classList.toggle('active')
 }

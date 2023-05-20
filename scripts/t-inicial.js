@@ -21,6 +21,13 @@ toggle.onclick = function(){
     main.classList.toggle('active');
 }
 
+// menu ususario
+function MenuToggle(){
+    const toggleMenu = document.querySelector('.menu');
+    toggleMenu.classList.toggle('active')
+}
+
+
 // carrocel
 let count = 1;
 document.getElementById("radio1").checked = true;
