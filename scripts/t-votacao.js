@@ -21,6 +21,12 @@ toggle.onclick = function(){
     main.classList.toggle('active');
 }
 
+// menu ususario
+function MenuToggle(){
+    const toggleMenu = document.querySelector('.menu');
+    toggleMenu.classList.toggle('active')
+}
+
 // Função para computar os votos
 var votosAprovar = 0;
 var votosReprovar = 0;

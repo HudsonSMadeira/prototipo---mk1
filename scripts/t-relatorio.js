@@ -21,6 +21,12 @@ list.forEach((item) => item.addEventListener("mouseover", activeLink));
      main.classList.toggle('active');
  }
 
+ // menu ususario
+function MenuToggle(){
+    const toggleMenu = document.querySelector('.menu');
+    toggleMenu.classList.toggle('active')
+}
+
  //Graficos
  const ctx = document.getElementById('myChart');
  const earning = document.getElementById('earning');
