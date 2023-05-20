@@ -63,53 +63,59 @@
         </div>
 
         <!-- main -->
+
         <div class="main">
             <div class="topbar">
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
-                <!-- Barra de Pesquisa -->
+
+                <!-- Pesquisa -->
+
                 <div class="search">
                     <label>
                         <input type="text" placeholder="Pesquisar">
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
-                <!-- imagem do usuário -->
-                <div class="user">
-                    <img src="imagens/hudson2.jpg">
+
+                <!-- usuário -->
+
+                <div class="action">
+                    <div class="user" onclick="MenuToggle()">
+                        <img src="imagens/hudson2.jpg">
+                    </div>
+                    <div class="box-usuario">
+                        <h3>Professor</h3><br>
+
+                        <span>Eng. de Sofrware</span>
+
+                        <ul>
+                            <a href="#">
+                                <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                                <span class="title">Meu perfil</span>
+                            </a>
+                        </ul>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
+                                <span class="title">Editar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                                <span class="title">Sair</span>
+                            </a>
+                        </li>
+
+                    </div>
                 </div>
             </div>
 
-            <!-- login/cadastro -->
-            <div class="loginBox">
-                <div class="container">
-                    <div class="top-header">
-                        <span>Cadastre-se</span>
-                        <header>Login</header>
-                    </div>
+            <!-- login -->
 
-                    <div class="usuario">
-                        <ion-icon name="people-outline"></ion-icon>
-                        <input type="text" class="input" placeholder="Nome" required>
-                    </div>
-
-                    <div class="senha">
-                        <ion-icon name="lock-open-outline"></ion-icon>
-                        <input type="password" class="input" placeholder="Senha" required>
-                    </div>
-
-                    <div class="enviar">
-                        <input type="submit" class="submit" value="Login">
-                    </div>
-
-                    <div class="bottom">
-                        <div class="left">
-                            <label for="check"></label>
-                        </div>
-                    </div>
-            </div>
-        </div>    
+        </div>   
     </div>
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 

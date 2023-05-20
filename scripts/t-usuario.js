@@ -20,3 +20,9 @@ toggle.onclick = function(){
     navigation.classList.toggle('active');
     main.classList.toggle('active');
 }
+
+// menu ususario
+function MenuToggle(){
+    const toggleMenu = document.querySelector('.box-usuario');
+    toggleMenu.classList.toggle('active')
+}

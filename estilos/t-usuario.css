@@ -229,7 +229,7 @@ body {
     font-size: 1.2em;
 }
 
-.user {
+/*.user {
     position: relative;
     width: 40px;
     height: 40px;
@@ -245,16 +245,196 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}*/
+
+.action {
+    position: fixed;
+    top: 20px;
+    right: 30px;
 }
 
-.loginBox {
+.action .user {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.action .user img {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action .box-usuario {
+    position: absolute;
+    top: 80px;
+    right: -10px;
+    padding: 10px 20px;
+    background: var(--verde1);
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.action .box-usuario.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .box-usuario::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    background: var(--verde1);
+    transform: rotate(45deg);
+}
+
+.action .box-usuario h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.action .box-usuario span {
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 400px;
+}
+
+.action .box-usuario ul li {
+    list-style: none;
+    padding: 10px 0px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    direction: flex;
+}
+
+.action .box-usuario ul li span .icon ion-icon {
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.action .box-usuario ul li span:hover .icon {
+    opacity: 1;
+}
+
+.action .box-usuario ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500px;
+    transition: 0.5s;
+}
+
+.action .box-usuario ul li:hover a {
+    color: var(--verde1);
+}
+
+.Box {
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: var(--white);
+}
+
+.login-right {
+    background-color: var(--white);
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 90vh;
 }
 
+.login-header {
+    width: 50px;
+    margin-bottom: 50px;
+}
 
+.login-header h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    opacity: 7;
+}
+
+.login-form {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.form-item label:not(.checkboxLabel) {
+    display: inline-block;
+    background-color: var(--white);
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 10px;
+    transform: translate(30px -10px);
+    font-size: 14px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--black2);
+}
+
+button {
+    border: none;
+    background: var(--verde1);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+}
+
+input[type='text'],
+input[type='password'] {
+    border: 1px solid var(--black1);
+    height: 55px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: bacground .5s;
+    font-size: 18px;
+    border-radius: 100px;
+}
 
 
 /* tornando a tela responsiva*/
