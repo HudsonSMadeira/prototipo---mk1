@@ -91,19 +91,42 @@
                 </div> 
             </div>
 
-            <!-- Graficos -->
-                
-            <div class="graphBox">
-                <div class="">
-                    
-                </div>
-                <div class="box">
-                    <canvas id="earning"></canvas>
-                </div>
-            </div>
+            
 
             <!-- avatar do aluno-->
+            <div class="card">
+                <div class="card-image">
+                    <img src="imagens/usuario01.png" alt="">
+                </div>
+                <p class="name">Lvio silva</p>
+                <p>TADS - 2023</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Assumenda delectus hic, molestias dolorum
+                    fugiat non ad, consectetur pariatur vitae dolor 
+                    a consequuntur obcaecati possimus totam sit enim 
+                    eos quia quis.
+                </p>
+            </div>
 
+            <!-- Votação -->
+            
+            <div class="votar">
+                <h3>Escolha seu Voto</h3>
+                <div class="option">
+                    <input type="radio" name="voto" id="aprovar" value="aprovar">
+                    <label for="aprovar">Aprovar</label>
+
+                    <div class="option">
+                        <input type="radio" name="voto" id="reprovar" value="reprovar">
+                        <label for="reprovar">Reprovar</label>
+                    </div>
+
+                    <button onclick="votar()">Votar</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+            
+            <!--
             <div class="revenue-card">
                 <h3 class="section-head">Dados do Aluno</h3>
                 <div class="rev-content">
@@ -120,23 +143,18 @@
                     </div>
 
                 </div>
-            </div>
+            </div>-->
 
-            <!-- Votação -->
-            
-            <div class="votar">
-                <h3>Escolha seu Voto</h3>
-                <div class="option">
-                <input type="radio" name="voto" id="aprovar" value="aprovar">
-                <label for="aprovar">Aprovar</label>
-            </div>
-            <div class="option">
-                <input type="radio" name="voto" id="reprovar" value="reprovar">
-                <label for="reprovar">Reprovar</label>
-            </div>
-                <button onclick="votar()">Votar</button>
-                <div id="result"></div>
-            </div>
+            <!-- Graficos -->
+                
+            <div class="graphBox">
+                <div class="">
+                    
+                </div>
+                <div class="box">
+                    <canvas id="earning"></canvas>
+                </div>
+            </div>      
 
         </div>    
     </div>
