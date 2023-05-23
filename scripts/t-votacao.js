@@ -36,9 +36,9 @@ function votar() {
     var resultDiv = document.getElementById('result');
     var reportDiv = document.getElementById('report');
 
-    if (voto === 'aprovar') {
+    if (voto === 'Aprovar') {
     votosAprovar++;
-    } else if (voto === 'reprovar') {
+    } else if (voto === 'Reprovar') {
     votosReprovar++;
     }
 
