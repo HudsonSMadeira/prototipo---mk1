@@ -59,29 +59,21 @@ const earning = document.getElementById('earning');
 
 
 new Chart(earning, {
-    type: 'line',
-    data: {
-        labels: ['Prog.Web', 'Siste.Operacionais', 'Banco-dados', 'Arq.Computadores', 'Estr.Dados', 'Eng.Softwre','Proj.Integrador'],
+    type: 'doughnut',
+    data: data = {
+        labels: [
+          'Aprovado',
+          'Reprovado',
+          
+        ],
         datasets: [{
-            label: 'Informações',
-            data: [8.3, 6.2, 3, 5, 2.2, 8, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+          label: 'My First Dataset',
+          data: [70, 30],
+          backgroundColor: [
+            'rgb(63, 228, 41)',
+            'rgb(252, 27, 27)'
+          ],
+          hoverOffset: 4
         }]
     },
     options: {

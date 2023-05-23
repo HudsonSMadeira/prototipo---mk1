@@ -110,10 +110,10 @@ body {
 .navigation ul li a .title {
     position: relative;
     display: block;
-    padding: 0 10px;
+    padding: 0 20px;
     height: 60px;
     line-height: 60px;
-    text-align: start;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -207,6 +207,8 @@ body {
     left: 10px;
     font-size: 1.2em;
 }
+
+/* Informações do usuario */
 
 .action {
     position: fixed;
@@ -378,65 +380,185 @@ button:hover {
     opacity: 0.8;
 }
 
-/*
-.revenue-card{
-    width: 230px;
-    height: 325px;
-    margin-top: 20px;
-    margin-left: 70%;
-    padding: 10px;
-    background: var(--black2);
-    box-shadow: #222;
-    border-radius: 15px;
-    padding: 1rem;
-    text-align: center; 
+/* Informações do aluno */
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
 }
 
-.revenue-card .rev-content img {
-    width: 100px;
-    height: 100px;
-    margin: 1.5rem 0rem;
-}*/
-
-
-.votar{
-    padding: 10px;
-    width: 200px;
-    height: 160px;
-    margin-left: 71.7%;
-    background-color: var(--black2);
-    margin-top: 30px;
-    border-radius: 10px;
+.cardBox .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0px 7px 25px rgba(0,0,0,0.08);
 }
 
-.votar h3 {
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500px;
+    font-size: 2.5em;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName {
+    color: var(--black2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 3.5em;
+    color: var(--black2);
+}
+
+.cardBox .card:hover {
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+    color: var(--white);
+}
+
+/* Diciplinas e médias */
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+.details .recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0px 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600px;
+    color: var(--verde1);
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600px;
+}
+
+.details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.details .recentOrders table tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover {
+    background: var(--verde1);
+    color: var(--white);
+}
+
+.details .recentOrders table tr td {
+    padding: 10px;
+}
+
+.details .recentOrders table tr td:last-child {
+    text-align: end;
+}
+
+.details .recentOrders table tr td:nth-child(2) {
+    text-align: end;
+}
+    
+.details .recentOrders table tr td:nth-child(3) {
     text-align: center;
 }
 
-.votar .option {
+/* status da votação*/
+
+.status.aprovado {
+    padding: 2px 4px;
+    background: rgb(63, 228, 41);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500px;
+}
+
+.status.reprovado {
+    padding: 2px 4px;
+    background: rgb(252, 27, 27);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500px;
+}
+
+/* Botão de votar */
+
+.cardvota{
+    padding: 10px;
+    width: 250px;
+    height: 190px;
+    background-color: var(--black2);
+    margin-top: 150px;
+    border-radius: 10px;
+}
+
+.cardvota h3 {
+    text-align: center;
+}
+
+.cardvota .option {
     padding: 7px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.votar .option label{
-    width: 70px;
+.cardvota .option label{
+    width: 90px;
     border-radius: 5px;
-    text-align: center;
     background-color: var(--white);
 }
 
-.votar .option input[type="radio"] {
+.cardvota .option input[type="radio"] {
     margin-right: 10px;
 }
 
-.votar button{
+.cardvota button{
     color: var(--white);
     width: 60px;
     height: 25px;
     border-radius: 5px;
-    align-items: center;
     background-color: var(--verde1);
 }
 
@@ -453,7 +575,7 @@ button:hover {
 /* Grafico */
 
 .graphBox {
-    position: absolute;
+    position: relative;
     width: 50%;
     padding: 20px;
     display: flex;
@@ -466,7 +588,7 @@ button:hover {
     position: absolute;
     background: #fff;
     padding: 20px;
-    width: 600px;
+    width: 300px;
     box-shadow: 0px 7px 25px rgba(0,0,0,0.08);
     border-radius: 20px;
     margin-right: 100%;

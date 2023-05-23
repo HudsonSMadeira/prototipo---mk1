@@ -90,72 +90,108 @@
                     </div>
                 </div> 
             </div>
-
             
-
-            <!-- avatar do aluno-->
-            <div class="card">
-                <div class="card-image">
-                    <img src="imagens/usuario01.png" alt="">
-                </div>
-                <p class="name">Lvio silva</p>
-                <p>TADS - 2023</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Assumenda delectus hic, molestias dolorum
-                    fugiat non ad, consectetur pariatur vitae dolor 
-                    a consequuntur obcaecati possimus totam sit enim 
-                    eos quia quis.
-                </p>
-            </div>
-
-            <!-- Votação -->
-            
-            <div class="votar">
-                <h3>Escolha seu Voto</h3>
-                <div class="option">
-                    <input type="radio" name="voto" id="aprovar" value="aprovar">
-                    <label for="aprovar">Aprovar</label>
-
-                    <div class="option">
-                        <input type="radio" name="voto" id="reprovar" value="reprovar">
-                        <label for="reprovar">Reprovar</label>
-                    </div>
-
-                    <button onclick="votar()">Votar</button>
-                    <div id="result"></div>
-                </div>
-            </div>
-            
-            <!--
-            <div class="revenue-card">
-                <h3 class="section-head">Dados do Aluno</h3>
-                <div class="rev-content">
-
-                    <img src="imagens/usuario01.png" alt="usuario">
-
-                    <div class="rev-info">
-                        <h1>Enio Charles</h1>
-                        <h3>2023 - TADS - 24</h3>
-                    </div>
+             <!-- Informações do aluno -->
+             <div class="cardBox">
+                <div class="card">
                     <div>
-                        <h4>Turno - Noite</h4>
-                        <h2></h2>
+                        <div class="card-image">
+                            <img src="imagens/usuario01.png" alt="">
+                        </div>
+                        <p class="name">Lívio da silva</p>
+                        <p>TADS - 2023</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Assumenda delectus hic, molestias dolorum
+                            fugiat non ad, consectetur pariatur vitae dolor 
+                            a consequuntur obcaecati possimus totam sit enim 
+                            eos quia quis.
+                        </p>
                     </div>
-
                 </div>
-            </div>-->
-
-            <!-- Graficos -->
-                
-            <div class="graphBox">
-                <div class="">
-                    
+                <div class="card">
+                    <div>
+                        
+                    </div>
                 </div>
-                <div class="box">
-                    <canvas id="earning"></canvas>
-                </div>
-            </div>      
+                <div class="cardvota">
+                    <!-- Votação -->
+                    <h3>Escolha seu Voto</h3>
+                    <div class="option">
+                        <input type="radio" name="voto" id="aprovar" value="aprovar">
+                        <label for="aprovar">Aprovar</label>
 
+                        <div class="option">
+                            <input type="radio" name="voto" id="reprovar" value="reprovar">
+                            <label for="reprovar">Reprovar</label>
+                        </div>
+
+                        <button onclick="votar()">Votar</button>
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Diciplinas e médias -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Desenpenho do Aluno</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Diciplinas</td>
+                                <td>Média</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Arquitetura de Computadores</td>
+                                <td>5.5</td>
+                                <td><span class="status reprovado">Reprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Estrutura deDados</td>
+                                <td>4.6</td>
+                                <td><span class="status reprovado">Reprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sistemas Operacionais</td>
+                                <td>8.0</td>
+                                <td><span class="status aprovado">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Banco de Dados</td>
+                                <td>7.8</td>
+                                <td><span class="status aprovado">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Programação Web</td>
+                                <td>8.8</td>
+                                <td><span class="status aprovado">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Engenharia de Software</td>
+                                <td>4.8</td>
+                                <td><span class="status reprovado">Reprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Projeto Integrador I</td>
+                                <td>8</td>
+                                <td><span class="status aprovado">Aprovado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Grafico -->
+                <div class="graphBox">
+                    <div class="box">
+                        <canvas id="earning"></canvas>
+                    </div>
+                </div>
+            </div>  
         </div>    
     </div>
 
