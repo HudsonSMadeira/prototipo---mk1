@@ -119,24 +119,7 @@
                     </div>
                 </div>
 
-                <!-- Votar -->
-                <div class="cardvota">
-                    <!-- Votação -->
-                    <h3>Escolha seu Voto</h3>
-
-                    <div class="option">
-                        <input type="radio" name="voto" id="Aprovar" value="Aprovar">
-                        <label for="Aprovar">Aprovar</label>
-                    </div>
-
-                    <div class="option">
-                        <input type="radio" name="voto" id="Reprovar" value="Reprovar">
-                        <label for="Reprovar">Reprovar</label>
-                    </div>
-
-                    <button onclick="votar()">Votar</button>
-                    <div id="result"></div>
-                </div>
+                
             </div>
             
             <!-- Diciplinas e médias -->
@@ -199,6 +182,26 @@
                         <canvas id="earning"></canvas>
                     </div>
                 </div>
+
+                <!-- Votar -->
+                <div class="cardvota">
+                    <!-- Votação -->
+                    <h3>Escolha seu Voto</h3>
+
+                    <div class="option1">
+                        <input type="radio" name="voto" id="Aprovar" value="Aprovar">
+                        <label class="apr" for="Aprovar">Aprovar</label>
+                    </div>
+
+                    <div class="option2">
+                        <input type="radio" name="voto" id="Reprovar" value="Reprovar">
+                        <label for="Reprovar">Reprovar</label>
+                    </div>
+
+                    <button onclick="votar()">Votar</button>
+                    <div id="result"></div>
+                </div>
+
             </div>  
         </div>    
     </div>
