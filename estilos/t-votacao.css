@@ -387,47 +387,19 @@ button:hover {
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
 }
 
 .cardBox .card {
     position: relative;
-    background: var(--white);
+    background: var(--black3);
     padding: 30px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    box-shadow: 0px 7px 25px rgba(0,0,0,0.08);
-}
-
-.cardBox .card .numbers {
-    position: relative;
-    font-weight: 500px;
-    font-size: 2.5em;
-    color: var(--blue);
-}
-
-.cardBox .card .cardName {
-    color: var(--black2);
-    font-size: 1.1em;
-    margin-top: 5px;
-}
-
-.cardBox .card .iconBx {
-    font-size: 3.5em;
-    color: var(--black2);
-}
-
-.cardBox .card:hover {
-    background: var(--blue);
-}
-
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx {
-    color: var(--white);
+    box-shadow: 0px 7px 25px rgba(0,0,0,0.2);
 }
 
 /* Diciplinas e médias */
@@ -445,9 +417,9 @@ button:hover {
     position: relative;
     display: grid;
     min-height: 500px;
-    background: var(--white);
+    background: var(--black3);
     padding: 20px;
-    box-shadow: 0px 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0px 7px 25px rgba(0,0,0,0.2);
     border-radius: 20px;
 }
 
@@ -466,6 +438,7 @@ button:hover {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    border-radius: 2px;
 }
 
 .details table thead td {
@@ -473,8 +446,13 @@ button:hover {
 }
 
 .details .recentOrders table tr {
-    color: var(--black1);
+    color: var(--verde1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.details .recentOrders table .dicipli{
+    font-size: 22px;
+    
 }
 
 .details .recentOrders table tr:last-child {
@@ -528,9 +506,10 @@ button:hover {
     padding: 10px;
     width: 250px;
     height: 300px;
-    background-color: var(--black2);
+    background-color: var(--black3);
     margin-top: 120px;
     border-radius: 10px;
+    box-shadow: 0px 7px 25px rgba(0,0,0,0.2);
 }
 
 .cardvota h3 {
@@ -589,14 +568,15 @@ button:hover {
     grid-template-columns: 1fr;
     grid-gap: 30px;
     min-height: 00px;
+    
 }
 
 .graphBox .box {
     position: absolute;
-    background: #fff;
+    background: var(--black3);
     padding: 20px;
     width: 300px;
-    box-shadow: 0px 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0px 7px 25px rgba(0,0,0,0.2);
     border-radius: 20px;
     margin-right: 100%;
 }
