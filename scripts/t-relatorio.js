@@ -1,5 +1,4 @@
 // adicionarndo hovered class 
-
 let list = document.querySelectorAll(".navigation li");
 
 function activeLink() {
