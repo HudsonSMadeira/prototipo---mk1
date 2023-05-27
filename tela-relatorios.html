@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/t-relatorios.css">
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="cscript.js"></script>
     <title>Sistema de Votação IFPI</title>
 </head>
 <body>
@@ -12,7 +16,7 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="tela-inicial.html">
                         <img src="imagens/IFPI01.png">
                         <span class="title">SV-IFPI</span>
                     </a>
@@ -56,7 +60,6 @@
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
-
                 <!-- Search -->
                 <div class="search">
                     <label>
@@ -64,45 +67,133 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
-                
-                <!-- usuário -->
-                <div class="action">
-                    <div class="profile" onclick="MenuToggle()">
-                        <img src="imagens/hudson2.jpg">
-                    </div>
-                    <div class="menu">
-                        <h3>Hudaon S Madeira<br><span>Professor</span></h3>
-            
-                        <ul>
-                            <li>
-                                <img src="imagens/user.png"><a href="#">Meu perfil</a>
-                            </li>
-                            <li>
-                                <img src="imagens/edit.png"><a href="#">Editar</a>
-                            </li>
-                            <li>
-                                <img src="imagens/log-out.png"><a href="#">Sair</a>
-                            </li>
-                        </ul>
-                        
-                    </div>
-                </div> 
-            </div>
-
-            <!--
-            <div class="graphBox">
-                <div class="box">
-                    <canvas id="earning"></canvas>
+                <!-- userImg -->
+                <div class="user">
+                    <img src="imagens/hudson2.jpg">
                 </div>
             </div>
-                -->
+
+        
+            <div class="graphBox">
+                <div class="graphBox">
+                    <div class="box">
+                        media da sala:
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="box">
+                        <h1>opinião <br>do professor;</h1>
+                        <h>Lucas sempre foi um aluno exemplar em todas as matérias, mas essas duas em particular pareciam desafiá-lo mais do que as outras. Antes do período em que começou a passar por problemas emocionais, ele dominava os conceitos e era capaz de resolver problemas complexos com facilidade. No entanto, seu desempenho nessas disciplinas começou a cair consideravelmente.</h>
+                    </div>
+                 </div>
+                <div class="box">
+                    <div id="dados">
+                        <div class="foto"><ion-icon name="person-outline" class="
+                            perf"></ion-icon></div>
+                        <div id="alunos">
+                            <div id="informacao">
+                                
+                                <h2>nome do aluno:</h2><br>
+                                <h3>luendson benvindo carreiro</h3>
+                                <h1>matérias em analise:</1h><br>
+                                <h>matematica, português, filosofia</h>
+                                <h1>curso:</1h><br>
+                                <h>Analize e desenvovimento de sistemas</h>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caixabaixa">
+                <div class="dcaixa">
+                    <div id="chartdiv1"><samp>este ano</samp></div>
+                </div>
+                <div class="dcaixa">
+                    <div id="chartdiv2"><samp>ano pasado</samp></div>
+                </div>
+            </div>
+            
+
+            
         </div>    
     </div>
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
     <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="scripts/t-relatorio.js"></script>
+    <script src="scripts/grafico_tela_relatorio.js"></script>
     
+
+    <script>
+
+        // MenuToggle 
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        // add hovered class in selector list item
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+
+        //Graficos
+        const ctx = document.getElementById('myChart');
+        const earning = document.getElementById('earning');
+
+        new Chart(ctx, {
+            type: 'polarArea',
+            data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green'],
+                datasets: [{
+                    label: 'Traffic Source',
+                    data: [12, 19, 3, 5],
+                    borderWidth: 1
+            }]
+            },
+            options: {
+            Responsive: true
+            }
+        });
+
+        new Chart(earning, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                Responsive: true
+            }
+        });
+
+    </script>
 </body>
 </html>
