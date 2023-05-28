@@ -42,7 +42,7 @@ function votar() {
     votosReprovar++;
     }
 
-    resultDiv.innerHTML = "Seu voto foi: " + voto;
+    resultDiv.innerHTML = "Você votou em: " + voto;
     reportDiv.innerHTML = "Relatório:<br>Aprovações: " + votosAprovar + "<br>Reprovações: " + votosReprovar;
 
     var totalVotos = votosAprovar + votosReprovar;
