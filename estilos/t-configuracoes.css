@@ -26,6 +26,8 @@ body {
 .container {
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .navigation {
@@ -208,8 +210,6 @@ body {
     font-size: 1.2em;
 }
 
-/* menu superio usuario*/
-
 .action {
     position: fixed;
     top: 7px;
@@ -223,7 +223,6 @@ body {
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
-    border: 3px solid var(--verde1);
 }
 
 .profile img {
@@ -241,7 +240,7 @@ body {
     right: -10px;
     padding: 10px 20px;
     background: var(--black3);
-    width: 160px;
+    width: 200px;
     box-sizing: 0 5px 25px rgba(0,0,0,0.1);
     border-radius: 15px;
     transition: 0.5s;
@@ -268,7 +267,7 @@ body {
 .action .menu h3 {
     width: 100%;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     padding: 20px 0;
     font-weight: 500;
     font-size: 18px;
@@ -277,14 +276,14 @@ body {
 }
 
 .action .menu h3 span {
-    font-size: 10px;
+    font-size: 14px;
     color: var(--black);
     font-weight: 400px;
 }
 
 .action .menu ul li {
     list-style: none;
-    padding: 14px 0px;
+    padding: 10px 0px;
     border-top: 1px solid rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
@@ -306,7 +305,7 @@ body {
     display: inline-block;
     text-decoration: none;
     color: var(--white);
-    font-weight: 400px;
+    font-weight: 500px;
     transition: 0.5s;
 }
 
@@ -392,5 +391,138 @@ body {
         right: 0px;
         left: initial;
         color: var(--white);
+    }
+}
+
+.container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    margin-left: 20px;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    color: #0B661A;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    width: 450%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid limegreen;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0B661A;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.continue-button button {
+    width: 200px;
+    margin-top: 1.0rem;
+    border: none;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.82rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #0B661A;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
     }
 }
